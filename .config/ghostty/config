@@ -45,3 +45,6 @@
 background-opacity = 0.60
 font-family = CommitMono Nerd Font Mono
 font-size = 12
+
+selection-foreground = #ffffff
+selection-background = #44475a

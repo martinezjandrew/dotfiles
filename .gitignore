@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.config/
+!.config/ghostty/
+!.config/gtk-3.0/
+!.config/spicetify/
+!.config/waybar/
+!.config/starship.toml
+!.config/hypr/
