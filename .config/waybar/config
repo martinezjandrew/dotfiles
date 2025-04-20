@@ -1,0 +1,144 @@
+{
+	"layer": "top",
+	"position": "right",
+  "spacing": 0,
+  "height": "10px",
+  "width": "10px",
+	"modules-center": ["hyprland/workspaces"],
+	"modules-left": ["clock"],
+	"modules-right": [
+    "tray",
+    "memory",
+    "wireplumber",
+    "bluetooth",
+    "network",
+    "battery"
+  ],
+	
+  "bluetooth": {
+    "format": "󰂱",
+    "format-connected": "",
+    "format-connected-battery": " {icon}",
+    "format-icons": [
+      "󰤾", 
+      "󰤿",
+      "󰥀",
+      "󰥁",
+      "󰥂",
+      "󰥃",
+      "󰥄",
+      "󰥅",
+      "󰥆",
+      "󰥈"
+    ],
+  	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	  "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+
+	"clock": {
+    "tooltip-format": "{calendar}",
+		"format": "{:%I\n%M}",
+    "interval": 60
+	},
+  
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻",
+      "urgent": "󱓻"
+    },        
+    "persistent-workspaces": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+    },
+  },
+	"pulseaudio": {
+		"format": "{volume}%",
+		"format-muted": "",
+	},
+
+	"network": {
+    "format-wifi" : "{icon}",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "format-ethernet": "󰀂",
+	  "format-alt" : "󱛇",
+    "format-disconnected": "󰖪",
+	  "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+	  "tooltip-format-disconnected": "Disconnected",
+	  "interval": 5,
+	  "nospacing": 1,
+	},
+
+	"battery": {
+    "format": "{icon}",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "Charged ",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip-format": "Capacity : {capacity}%"
+  },
+  "wireplumber": {
+      "format": "{icon}",
+      "format-bluetooth": "󰂰",
+      "nospacing": 1,
+      "tooltip-format": "Volume : {volume}%",
+      "format-muted": "󰝟",
+      "format-icons": {
+        "headphone": "",
+        "default": ["󰖀","󰕾",""]
+      },
+      "on-click": "pamixer -t",
+      "scroll-step": 1
+  },
+  "memory": {
+      "interval": 5,
+      "format": "󰍛",
+      "max-length": 10
+    }
+
+}
